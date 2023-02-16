@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+D:\Jag\wipro\Jan2023\new\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3811666282.index
+815642530.index
+2194337007.index
+623586860.index
+3726445119.index
+623586860.index
+2519382000.index
+4252820095.index

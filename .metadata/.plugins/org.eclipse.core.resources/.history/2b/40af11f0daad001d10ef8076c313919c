@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <form action="dml" method="POST">
+      	Id:<input type="number" class="form-control" name="id" />
+      	Name:<input type="text" class="form-control" name="name" />
+      	Price:<input type="number" class="form-control" name="price" /><br/>
+      	<input type="submit" value="Add" name="add" class="btn btn-success" />&nbsp;
+      	<input type="submit" value="Update" name="update" class="btn btn-warning" />&nbsp;
+      	<input type="submit" value="Delete" name="delete" class="btn btn-danger" />&nbsp;
+      	
+      </form>
+    </div>
+    <hr/>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-sm-2"></div>
+  	<div class="col-sm-8">
+  		<table class="table table-bordered table-striped table-hover">
+  			<thead>
+  				<tr>
+  					<td>Id</td><td>Name</td><td>Price</td>
+  				</tr>
+  			</thead>
+  		</table>
+  	</div>
+  	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+</body>
+</html>

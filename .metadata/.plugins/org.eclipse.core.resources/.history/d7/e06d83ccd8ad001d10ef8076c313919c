@@ -1,0 +1,6 @@
+package com.wipro.jag.model;
+
+
+public class Product {
+
+}

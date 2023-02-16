@@ -1,0 +1,13 @@
+package com.wipro.jag;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Mvc1ApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

@@ -1,0 +1,53 @@
+package com.wipro.jag.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.wipro.jag.model.Product;
+import com.wipro.jag.model.ProductRepository;
+
+@Controller
+public class ProductController {
+	@Autowired
+	private ProductRepository pdao;
+	
+	@GetMapping("/showProduct")
+	public ModelAndView showProductPage()
+	{
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("product");
+		//obtain all products from the table
+		List<Product> products = pdao.findAll();
+		mv.addObject("products", products);
+		return mv;
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "dml", params = "add")
+	public ModelAndView addProduct(Product product)
+	{
+		pdao.save(product);
+		return showProductPage();
+	}
+
+	@RequestMapping(method = RequestMethod.POST, value = "dml", params = "update")
+	public ModelAndView updateProduct(Product product)
+	{
+		pdao.update(product);
+		return showProductPage();
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "dml", params = "delete")
+	public ModelAndView deleteProduct(Product product)
+	{
+		pdao.save(product);
+		return showProductPage();
+	}
+	
+}
